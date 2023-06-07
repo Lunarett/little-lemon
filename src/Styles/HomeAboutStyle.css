@@ -1,0 +1,56 @@
+.aboutBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #495e57;
+}
+
+.aboutImgContainer {
+    display: flex;
+    justify-content: center;
+    padding: 15rem 0 10rem 0;
+}
+
+.aboutImg1 {
+    transform: translate(-25%, 25%);
+    width: 400px;
+    height: 520px;
+}
+
+.aboutImg2 {
+    position: absolute;
+    z-index: 1;
+    transform: translate(25%, -25%);
+    width: 400px;
+    height: 520px;
+}
+
+.aboutContainer {
+    width: 50%;
+    margin-bottom: 4rem;
+}
+
+.aboutTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.aboutTitleContainer h1 {
+    color: #f4ce14;
+    text-align: center;
+    margin-right: 20px;
+    line-height: 0.2;
+}
+
+.aboutTitleContainer h4 {
+    color: white;
+    font-size: 10;
+    text-align: center;
+    line-height: normal;
+    line-height: 0;
+}
+
+.aboutDesc {
+    color: white;
+}

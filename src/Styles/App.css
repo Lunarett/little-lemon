@@ -1,0 +1,35 @@
+h1 {
+  font-family: 'Markazi Text Medium', serif;
+  text-transform: sentence-case;
+  font-size: 60px;
+  line-height: 24px;
+}
+
+h2 {
+  font-family: 'Karla Regular', sans-serif;
+  text-transform: sentence-case;
+  font-size: 50px;
+  line-height: 24px;
+}
+
+h4 {
+  font-family: 'Karla Regular', sans-serif;
+  text-transform: sentence-case;
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Karla Regular', sans-serif;
+  text-transform: sentence-case;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+button {
+  font-family: 'Karla Regular', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+}

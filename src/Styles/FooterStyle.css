@@ -1,0 +1,42 @@
+.footerBox {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background-color: #495e5751;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 160px;
+    max-width: 15%;
+}
+
+.footerImg {
+    width: 80%;
+    height: 80%;
+}
+
+.footerNavLink {
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
+
+@media (max-width: 767px) {
+    .footerImg {
+        width: 0;
+    }
+
+    .footerBox {
+        flex-direction: column;
+    }
+}

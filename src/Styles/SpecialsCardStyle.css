@@ -1,0 +1,68 @@
+.cardBox {
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 10px;
+    width: 300px;
+    height: 410px;
+    margin: 20px 40px;
+}
+
+.cardImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cardTitle {
+    font-size: 30px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.cardPrice {
+    font-size: 18px;
+    color: #e48d00;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.cardDesc {
+    margin: 10px 10px;
+    font-size: 14px;
+}
+
+.cardButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    height: 30px;
+    width: 100%;
+    background-color: #00000000;
+}
+
+.cardButton:hover {
+    background-color: #0000000c;
+}
+
+.cardButton:active {
+    background-color: #00000022;
+}
