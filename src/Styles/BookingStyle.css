@@ -1,0 +1,73 @@
+.bookingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./StyleAssets/BG_Lemon_Transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 6rem;
+
+}
+
+.bookingBox h1 {
+    font-family: 'Karla Regular', sans-serif;
+    padding: 0 40px;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #495e57aa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bookingFormContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.bookingTitle {
+    background-color: rgba(0, 0, 0, 0.273);
+    border-radius: 10px 10px 0 0;
+    padding: 0 4rem;
+    color: white;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.formContainer label {
+    font-size: 20px;
+    font-weight:500;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.formContainer input,
+.formContainer select {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 45px;
+}
+
+.formContainer input[type='submit'] {
+    background-color: #f4ce14;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formContainer input[type='submit']:hover {
+    background-color: #e9c613;
+}
