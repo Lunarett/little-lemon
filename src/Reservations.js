@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './Styles/BookingStyle.css';
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, setAvailableTimes }) => {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('17:00');
     const [guests, setGuests] = useState(1);
-    const [occasion, setOccasion] = useState('Birthday');
+    const [occasion, setOccasion] = useState('None');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,12 +28,9 @@ const BookingForm = () => {
 
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}>
-                    <option>17:00</option>
-                    <option>18:00</option>
-                    <option>19:00</option>
-                    <option>20:00</option>
-                    <option>21:00</option>
-                    <option>22:00</option>
+                    {availableTimes.map((availableTime) => (
+                        <option key={availableTime}>{availableTime}</option>
+                    ))}
                 </select>
 
                 <label htmlFor="guests">Number of guests</label>
@@ -60,12 +57,12 @@ const BookingForm = () => {
     );
 };
 
-function Reservations() {
+function Reservations({ availableTimes, setAvailableTimes }) {
     return (
         <div className='bookingBox'>
-            <BookingForm />
+            <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} />
         </div>
     );
 }
 
-export default Reservations
+export default Reservations;
