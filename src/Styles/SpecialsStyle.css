@@ -1,16 +1,71 @@
 .specialsBox {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-image: url("./StyleAssets/BG_Lemon_Transparent.png");
-    background-color: rgba(255, 255, 255, 0.2);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
-.specialsArea {
+.specialsContainer {
     display: flex;
-    justify-content: center;
-    margin:20px 0;
+    flex-direction: column;
+    background-color: #495e57aa;
+    border-radius: 10px;
+    margin: 4rem;
+}
+
+.specialtsTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.specialtsTitleContainer h2 {
+    color: white;
+}
+
+.specialsMenuButton {
+    font-family: 'Karla Regular', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: #f4ce14;
+    color: rgb(0, 0, 0);
+    width: 20%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.specialsCardContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .specialsContainer {
+        margin: 2rem;
+    }
+
+    .specialtsTitleContainer {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .specialsMenuButton {
+        width: 40%;
+        margin-top: 10px;
+    }
+
+    .specialsCardContainer {
+        flex-direction: column;
+    }
+
+    .specialsMenuButton {
+        padding: 5px;
+        margin-top: 30px;
+    }
 }

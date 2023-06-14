@@ -26,31 +26,77 @@
 }
 
 .aboutContainer {
-    width: 50%;
-    margin-bottom: 4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    align-items: left;
+    width: 60%;
 }
 
 .aboutTitleContainer {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    margin-bottom: 20px;
 }
 
 .aboutTitleContainer h1 {
     color: #f4ce14;
-    text-align: center;
     margin-right: 20px;
-    line-height: 0.2;
+    text-align: center;
+    line-height: 0;
+    font-size: clamp(10px, 8vw, 50px);
 }
 
 .aboutTitleContainer h4 {
     color: white;
-    font-size: 10;
     text-align: center;
     line-height: normal;
-    line-height: 0;
+    font-size: clamp(10px, 4vw, 24px);
 }
 
 .aboutDesc {
     color: white;
+    text-align: justify;
+    font-size: clamp(5px, 3vw, 18px);
+}
+
+@media (max-width: 768px) {
+    .aboutContainer {
+        width: 90%;
+    }
+
+    .aboutTitleContainer {
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .aboutTitleContainer h1 {
+        font-size: clamp(10px, 10vw, 100px);
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .aboutTitleContainer h4 {
+        font-size: clamp(2px, 4vw, 20px);
+        text-align: left;
+    }
+
+    .aboutTitleContainer p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .aboutImg1 {
+        width: 300px;
+        height: 420px;
+    }
+
+    .aboutImg2 {
+        width: 300px;
+        height: 420px;
+    }
 }

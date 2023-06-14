@@ -1,4 +1,8 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+import { Parallax } from 'react-parallax';
+
 import heroImg from './Assets/greek salad.jpg';
 import specialImg1 from './Assets/greek salad.jpg';
 import specialImg2 from './Assets/bruchetta.svg';
@@ -8,6 +12,7 @@ import pfp2 from './Assets/pfp2.jpeg';
 import pfp3 from './Assets/pfp3.jpg';
 import aboutImg1 from './Assets/restaurant chef B.jpg';
 import aboutImg2 from './Assets/Mario and Adrian A.jpg';
+import bgImg from './Styles/StyleAssets/BG_Lemon_Transparent.png'
 
 import './Styles/HeroBlockStyle.css';
 import './Styles/SpecialsStyle.css';
@@ -18,23 +23,20 @@ import './Styles/HomeAboutStyle.css';
 
 function HeroBlock() {
     return (
-        <div className='heroBackground'>
-            <span className='heroRow'>
-
-                <div className='heroContainer'>
-                    <div className='titleContainer'>
+        <div className='heroBox'>
+            <div className='heroContainer'>
+                <div className='heroTextContainer'>
+                    <div className='heroTitleContainer'>
                         <h1>Little Lemon</h1>
                         <h4>Chicago</h4>
                     </div>
                     <p>
-                        If you love Mediterranean food, you'll love Little Lemon! It's a cozy family-owned restaurant in Chicago that serves delicious dishes from Italy, Greece, and Turkey. The owners, Mario and Adrian, are two brothers who learned to cook from their grandmother and use fresh ingredients and authentic recipes. Whether you want a hearty pasta, a refreshing salad, or a sweet lemon dessert, Little Lemon has something for everyone. Come and taste the Mediterranean at Little Lemon today!
+                        Welcome to Little Lemon, the most refreshing and delicious restaurant in town! We serve fresh and healthy dishes with a touch of citrus that will make your mouth water. Whether you're looking for a hearty breakfast, a light lunch, or a satisfying dinner, we have something for everyone. Come and enjoy our cozy atmosphere, friendly service, and amazing food. You'll love Little Lemon!
                     </p>
-
-                    <button className='reserveBtn'>Reserve Table</button>
+                    <Link to='/Reservations' className='reserveBtn'>Reserve a Table</Link>
                 </div>
-
                 <img className='heroImg' src={heroImg} />
-            </span>
+            </div>
         </div>
     );
 }
@@ -59,29 +61,34 @@ function SpecialsCard(props) {
 
 function Specials() {
     return (
-        <div className='specialsBox'>
-            <h2>Specials</h2>
-            <span className='specialsArea'>
-                <SpecialsCard
-                    image={specialImg1}
-                    title="Greek Salad"
-                    price="$12.99"
-                    desc="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
-                />
-                <SpecialsCard
-                    image={specialImg2}
-                    title="Bruchetta"
-                    price="$5.99"
-                    desc="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-                />
-                <SpecialsCard
-                    image={specialImg3}
-                    title="Lemon Dessert"
-                    price="$5.00"
-                    desc="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
-                />
-            </span>
-        </div>
+        <Parallax strength={500} bgImage={bgImg} className='specialsBox'>
+            <div className='specialsContainer'>
+                <div className='specialtsTitleContainer'>
+                    <h2>Specials</h2>
+                    <Link to='/OrderOnline' className='specialsMenuButton'>Online Menu</Link>
+                </div>
+                <div className='specialsCardContainer'>
+                    <SpecialsCard
+                        image={specialImg1}
+                        title="Greek Salad"
+                        price="$12.99"
+                        desc="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+                    />
+                    <SpecialsCard
+                        image={specialImg2}
+                        title="Bruchetta"
+                        price="$5.99"
+                        desc="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
+                    />
+                    <SpecialsCard
+                        image={specialImg3}
+                        title="Lemon Dessert"
+                        price="$5.00"
+                        desc="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
+                    />
+                </div>
+            </div>
+        </Parallax>
     );
 }
 

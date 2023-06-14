@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   font-family: 'Markazi Text Medium', serif;
   text-transform: sentence-case;

@@ -1,9 +1,10 @@
 .navBar {
     display: flex;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     font-family: 'Karla Regular', sans-serif;
     font-weight: bold;
+    height: 37px;
 }
 
 .navArea {
