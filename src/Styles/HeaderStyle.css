@@ -1,4 +1,15 @@
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    header {
+        align-items: center;
+        width: auto;
+        height: 150px;
+        margin-bottom: 2rem;
+    }
 }
