@@ -1,5 +1,5 @@
 .chefBox {
-    background-color: #f4ce14;
+    background-color: var(--ll-yellow);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,9 +7,9 @@
 }
 
 .chefImg {
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .chefTextContainer {
@@ -25,22 +25,33 @@
     margin-bottom: 10px;
     font-family: 'Karla Regular', sans-serif;
     line-height: 1;
-    font-size: 100px;
+    font-size: clamp(5px, 4vw, 80px);
 }
 
 .chefDesc {
     color: black;
     text-align: justify;
-    font-size: 25px;
+    font-size: clamp(5px, 1.5vw, 20px);
 }
 
 @media (max-width: 768px) {
     .chefBox {
         flex-direction: column;
     }
-  
+
     .chefImg {
-        max-width: 100%;
-        max-height: none;
+        width: 100%;
+    }
+
+    .chefHeading {
+        font-size: clamp(5px, 8vw, 80px)
+    }
+
+    .chefDesc {
+        font-size: clamp(5px, 3vw, 20px);
+    }
+
+    .chefTextContainer {
+        padding: 2rem;
     }
 }

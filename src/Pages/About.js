@@ -1,8 +1,8 @@
 import React from 'react';
-import aboutImg from './Assets/Mario and Adrian A.jpg';
-import chefImg from './Assets/restaurant chef B.jpg';
-import './Styles/AboutStyle.css'
-import './Styles/AboutChefStyle.css'
+import aboutImg from '../Assets/Mario and Adrian A.jpg';
+import chefImg from '../Assets/restaurant chef B.jpg';
+import '../Styles/AboutStyle.css';
+import '../Styles/AboutChefStyle.css';
 
 function AboutChefBlock() {
     return (

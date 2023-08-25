@@ -1,23 +1,24 @@
-.aboutBox {
+.homeAboutBox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #495e57;
+    height: auto;
+    background-color: var(--ll-olive);
 }
 
-.aboutImgContainer {
+.homeAboutImgContainer {
     display: flex;
     justify-content: center;
     padding: 15rem 0 10rem 0;
 }
 
-.aboutImg1 {
+.homeAboutImg1 {
     transform: translate(-25%, 25%);
     width: 400px;
     height: 520px;
 }
 
-.aboutImg2 {
+.homeAboutImg2 {
     position: absolute;
     z-index: 1;
     transform: translate(25%, -25%);
@@ -25,7 +26,7 @@
     height: 520px;
 }
 
-.aboutContainer {
+.homeAboutContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -35,13 +36,13 @@
     width: 60%;
 }
 
-.aboutTitleContainer {
+.homeAboutTitleContainer {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
 }
 
-.aboutTitleContainer h1 {
+.homeAboutTitleContainer h1 {
     color: #f4ce14;
     margin-right: 20px;
     text-align: center;
@@ -49,54 +50,55 @@
     font-size: clamp(10px, 8vw, 50px);
 }
 
-.aboutTitleContainer h4 {
+.homeAboutTitleContainer h4 {
     color: white;
     text-align: center;
-    line-height: normal;
+    line-height: .75;
     font-size: clamp(10px, 4vw, 24px);
 }
 
-.aboutDesc {
+.homeAboutDesc {
     color: white;
     text-align: justify;
     font-size: clamp(5px, 3vw, 18px);
 }
 
 @media (max-width: 768px) {
-    .aboutContainer {
+    .homeAboutContainer {
         width: 90%;
     }
 
-    .aboutTitleContainer {
+    .homeAboutTitleContainer {
         flex-direction: column;
         align-items: left;
         width: 100%;
     }
 
-    .aboutTitleContainer h1 {
+    .homeAboutTitleContainer h1 {
         font-size: clamp(10px, 10vw, 100px);
         margin-bottom: 20px;
         text-align: left;
+        line-height: 1;
     }
 
-    .aboutTitleContainer h4 {
+    .homeAboutTitleContainer h4 {
         font-size: clamp(2px, 4vw, 20px);
         text-align: left;
     }
 
-    .aboutTitleContainer p {
+    .homeAboutTitleContainer p {
         font-size: 20px;
         margin-bottom: 20px;
         text-align: justify;
     }
 
-    .aboutImg1 {
-        width: 300px;
-        height: 420px;
+    .homeAboutImg1 {
+        width: clamp(50px, 60vw, 300px);
+        height: clamp(60px, 70vw, 420px);
     }
 
-    .aboutImg2 {
-        width: 300px;
-        height: 420px;
+    .homeAboutImg2 {
+        width: clamp(50px, 60vw, 300px);
+        height: clamp(60px, 70vw, 420px);
     }
 }

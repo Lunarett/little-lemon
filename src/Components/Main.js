@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Reservations from './Reservations';
-import OrderOnline from './OrderOnline';
-import Login from './Login';
+import Home from '../Pages/Home';
+import About from '../Pages/About';
+import Reservations from '../Pages/Reservations';
+import OrderOnline from '../Pages/OrderOnline';
+import Login from '../Pages/Login';
 
 function Main() {
     const initializeTimes = () => {

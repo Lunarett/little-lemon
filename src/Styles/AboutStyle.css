@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #495e57;
+    background-color: var(--ll-olive);
     height: 400px;
 }
 
@@ -17,17 +17,16 @@
 }
 
 .aboutContainer h1 {
-    color: #f4ce14;
+    color: var(--ll-yellow);
     text-align: left;
     line-height: 1.5;
-    font-size: 80px;
-    width: 100%;
+    font-size: clamp(5px, 4vw, 80px);
 }
 
 .aboutContainer p {
     color: white;
     text-align: justify;
-    font-size: 22px;
+    font-size: clamp(5px, 1.5vw, 20px);;
 }
 
 .aboutTextContainer {
@@ -48,6 +47,9 @@
 
 
 @media (max-width: 770px) {
+    .aboutBox {
+        height: 700px;
+    }
 
     .aboutContainer {
         flex-direction: column;
@@ -72,8 +74,8 @@
     }
 
     .aboutImg {
-        width: 65%;
-        height: 30%;
-        transform: translateY(-50%);
+        order: 0;
+        width: 100%;
+        height: auto;
     }
 }

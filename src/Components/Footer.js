@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import footerImg from './Assets/restauranfood.jpg';
-import './Styles/FooterStyle.css';
+import footerImg from '../Assets/restauranfood.jpg';
+import '../Styles/FooterStyle.css';
 
 function Footer() {
     return (
