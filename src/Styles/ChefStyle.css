@@ -1,0 +1,47 @@
+.chef-section {
+    background-color: var(--theme-color-2);
+    height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.chef-text-box {
+    width: 50%;
+    height: 100%;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chef-heading {}
+
+.chef-p {
+}
+
+.chef-img {
+    background-image: url('../Assets/Restaurant/mna2.jpg');
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .chef-section {
+        flex-direction: column;
+    }
+
+    .chef-text-box {
+        width: 100%;
+        height: 60%;
+        padding: 40px;
+    }
+
+    .chef-img {
+        width: 100%;
+        height: 50%;
+    }
+}

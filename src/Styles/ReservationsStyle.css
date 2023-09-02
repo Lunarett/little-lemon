@@ -1,0 +1,11 @@
+.resv-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 750px) {
+    .resv-section {
+        height: 200vh;
+    }
+}

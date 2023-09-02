@@ -1,21 +1,52 @@
 import React from 'react';
+import { menu } from '../Constants';
+import '../Styles/MenuStyle.css';
 
-function OrderOnline() {
+const DishCard = ({ dish }) => {
     return (
-        <>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
+        <div className="dish-card">
+            <img className='dish-img' src={dish.image} alt={dish.name} />
 
-            <a>This is 'a' reference example</a>
+            <div className='dish-text'>
+                <h3>{dish.name}</h3>
+                <p className='dish-price'>{dish.price}</p>
+                <p>{dish.desc}</p>
+            </div>
+            <button className='dish-card-button button'>Order for Delivery</button>
+        </div>
+    );
+}
 
-            <p>
-                A professional profile is a brief introduction that showcases your skills and achievements for a specific job. It can help you stand out from other candidates and catch the attention of employers. To write a professional profile, you should follow these steps:
-            </p>
-        </>
+const DishCategory = ({ category }) => {
+    return (
+        <div className='cat'>
+            <h1 className='cat-heading'>{category.category}</h1>
+            <div className="dish-container">
+                {category.items.map((dish, index) => (
+                    <DishCard key={index} dish={dish} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+const OrderOnline = () => {
+    return (
+        <section className='menu-section'>
+            <div className='menu-hero-bg'>
+                <div className='menu-hero'>
+                    <h1 className='menu-hero-heading'>Order Your Food Online!</h1>
+                    <h2 className='menu-hero-subheading'>Get your favorite dishes delivered straight to your doorstep!</h2>
+                </div>
+            </div>
+
+            <div className='menu'>
+                <h1>Our Menu</h1>
+                {menu.map((categoryObj, index) => (
+                    <DishCategory key={index} category={categoryObj} />
+                ))}
+            </div>
+        </section>
     );
 }
 

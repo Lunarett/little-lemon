@@ -1,36 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap');
+
+:root {
+    /* Theme Color Pallet */
+    --theme-color-1: #495e57;
+    --theme-color-2: #f4ce14;
+    --theme-color-3: #ee9972;
+    --theme-color-4: #fbdabb;
+    --theme-color-5: #edefee;
+    --theme-color-6: #333333;
+
+    /* Transparent Background Color */
+    --tbg-color-1: rgba(43, 64, 57, 0.55);
+
+    /* Content Margin Zone */
+    --zone: 75%;
+  }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --ll-olive: #495e57;
-  --ll-yellow: #f4ce14;
-}
-
+/* Heading */
 h1 {
-  font-family: 'Markazi Text Medium', serif;
-  text-transform: sentence-case;
-  font-size: 60px;
-  line-height: 24px;
-  font-size: clamp(10px, 3vw, 50px);
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 80pt;
+  text-transform: capitalize;
+  line-height: 1;
 }
 
+/* Sub-Heading */
 h2 {
-  font-family: 'Karla Regular', sans-serif;
-  text-transform: sentence-case;
-  font-size: clamp(10px, 3vw, 50px);
-  line-height: 24px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40pt;
+  text-transform: capitalize;
+  line-height: 1;
 }
 
-h4 {
+/* Card Heading */
+h3 {
   font-family: 'Karla Regular', sans-serif;
   text-transform: sentence-case;
   text-align: left;
   font-size: clamp(10px, 1vw, 24px);
 }
 
+/* Paragraph */
 p {
   font-family: 'Karla Regular', sans-serif;
   text-transform: sentence-case;
@@ -41,90 +60,71 @@ p {
 
 a {
   font-family: 'Karla Regular', sans-serif;
+  text-decoration: none;
 }
 
-button {
+label {
   font-family: 'Karla Regular', sans-serif;
+}
+
+.button {
+  font-family: 'Karla Regular', sans-serif;
+  color: black;
+  padding: 15px;
   font-size: 18px;
   font-weight: bold;
   border-width: 0;
   border-radius: 10px;
-  background-color: rgb(211, 211, 211);
+  position: relative;
+  transition: background-color 0.2s ease;
+  z-index: 1;
 }
 
-header {
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black; /* Tint color */
+  opacity: 0; /* Initially fully transparent */
+  z-index: -1; /* Place it below the button content */
+  border-radius: inherit; /* Inherit border-radius from button */
+  transition: opacity 0.2s ease; /* Smooth transition for opacity */
+}
+
+.button:hover::before {
+  opacity: 0.2; /* Slight tint on hover */
+}
+
+.button:active::before {
+  opacity: 0.3; /* Darker tint on click */
+}
+
+section {
   display: flex;
-  flex-direction: column;
+  position: relative;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 45px;
 }
 
-nav {
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
 
-nav a {
-  font-weight: bold;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  transform: translateY(-3px);
-}
-
-@media (max-width: 767px) {
+/* Small Devices */
+@media (max-width: 750px) {
   h1 {
-    font-size: clamp(10px, 10vw, 100px);
+    font-size: 40pt;
   }
 
   h2 {
-    font-size: clamp(10px, 8vw, 50px);
+    font-size: 20pt;
   }
 
   p {
-    font-size: clamp(5px, 5vw, 18px);
+    font-size: 10pt;
   }
 
-  header {
-    justify-content: flex-start;
-    width: auto;
-    height: 50px;
-    margin-bottom: 2rem;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    gap: 1.5rem;
-    transition: 1s;
-    transform: translateY(-100vh);
-  }
-
-  nav a {
-    line-height: 3rem;
-    font-size: 20px;
-  }
-
-  ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header .responsive_nav {
-    transform: none;
+  button {
+    font-size: 15px;
   }
 }

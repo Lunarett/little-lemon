@@ -1,0 +1,71 @@
+.story-section {
+    background-image: url('../Assets/Restaurant/mna1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    width: 100%;
+    z-index: 0;
+}
+
+.story-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.story-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 350px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 10rem;
+    background-color: var(--theme-color-1);
+}
+
+.story-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.story-heading {
+    color: var(--theme-color-2);
+    margin-right: 20px;
+}
+
+.story-subHeading {
+    color: white;
+}
+
+.story-p {
+    color: white;
+}
+
+.story-button {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: var(--theme-color-2);
+}
+
+@media (max-width: 750px) {
+    .story-text-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+}

@@ -27,14 +27,26 @@ function Main() {
     return (
         <main>
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/About' element={<About />} />
+                <Route
+                    path='/'
+                    element={<Home />}
+                />
+                <Route
+                    path='/About'
+                    element={<About />}
+                />
                 <Route
                     path='/Reservations'
                     element={<Reservations availableTimes={availableTimes} dispatch={dispatch} />}
                 />
-                <Route path='/OrderOnline' element={<OrderOnline />} />
-                <Route path='/Login' element={<Login />} />
+                <Route
+                    path='/OrderOnline'
+                    element={<OrderOnline />}
+                />
+                <Route
+                    path='/Login'
+                    element={<Login />}
+                />
             </Routes>
         </main>
     );

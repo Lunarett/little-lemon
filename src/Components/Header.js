@@ -1,9 +1,13 @@
 import React from 'react';
-import Nav from '../Components/Nav';
+import { Link } from 'react-router-dom';
+import { Nav } from '../Components';
+import logo from '../Assets/Logo.svg';
+import '../Styles/HeaderStyle.css';
 
-function Header() {
+const Header = () => {
     return (
-        <header>
+        <header className='top-header'>
+            <Link to="/"><img src={logo} alt="Logo" style={{ paddingRight: '20px' }} /></Link>
             <Nav />
         </header>
     );

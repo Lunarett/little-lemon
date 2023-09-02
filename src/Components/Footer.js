@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import footerImg from '../Assets/restauranfood.jpg';
+import { restFood1 } from '../Assets';
 import '../Styles/FooterStyle.css';
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
         <footer className='footerBox'>
             {/* Column 0: Image */}
             <span className='imgContainer'>
-                <img className='footerImg' src={footerImg} />
+                <img className='footerImg' src={restFood1} />
             </span>
 
             {/* Column 1: Doormat Navigation */}

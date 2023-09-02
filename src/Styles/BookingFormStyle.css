@@ -1,0 +1,104 @@
+/* Add this to your index.css */
+
+.booking-section {
+    width: 100%;
+    height: 50%;
+    background-color: var(--theme-color-1);
+    background-image: url("../Assets/Restaurant/restaurant.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.booking-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--tbg-color-1);
+    backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
+.form-container {
+    width: var(--zone);
+}
+
+.booking-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-heading {
+    color: var(--theme-color-2);
+}
+
+.form-column {
+    width: 48%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.booking-button {
+    background-color: var(--theme-color-2);
+    color: black;
+    cursor: pointer;
+    padding: 10px 4rem;
+    margin-top: 2rem;
+}
+
+.booking-label {
+    color: white;
+}
+
+.booking-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-size: 22px;
+}
+
+@media (max-width: 750px) {
+    .booking-form {
+        flex-direction: column;
+    }
+
+    .form-heading {
+        margin-bottom: 2rem;
+    }
+
+    .form-column {
+        width: 100%;
+    }
+
+    .booking-input {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .booking-button {
+        padding: 8px 20px;
+        margin-bottom: 20px;
+    }
+}

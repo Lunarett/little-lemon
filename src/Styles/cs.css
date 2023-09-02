@@ -1,0 +1,63 @@
+.contact-section {
+    flex-grow: 1;
+    background-color: var(--theme-color-2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.contact-text-box {
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem;
+}
+
+.contact-info h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.contact-info p {
+    margin-bottom: 1em;
+}
+
+.contact-img {
+    background-image: url(../Assets/Restaurant/mna1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-text-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .contact-text-box h1 {
+        font-size: 45px;
+        line-height: 1.5;
+    }
+
+    .contact-info h3 {
+        font-size: 13px;
+    }
+
+    .contact-img {
+        height: 100%;
+        width: 100%;
+    }
+}
