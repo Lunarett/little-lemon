@@ -3,39 +3,44 @@ import { Link } from 'react-router-dom';
 import { restFood1 } from '../Assets';
 import '../Styles/FooterStyle.css';
 
-function Footer() {
+const Footer = () => {
     return (
-        <footer className='footerBox'>
-            {/* Column 0: Image */}
-            <span className='imgContainer'>
-                <img className='footerImg' src={restFood1} />
-            </span>
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-row">
+                    {/* Column 2: Doormat Navigation */}
+                    <div className="footer-column">
+                        <h2>Navigation</h2>
+                        <ul>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/About'>About</Link></li>
+                            <li><Link to='/Reservations'>Reservations</Link></li>
+                            <li><Link to='/OrderOnline'>Order Online</Link></li>
+                            <li><Link to='/Login'>Login</Link></li>
+                        </ul>
+                    </div>
 
-            {/* Column 1: Doormat Navigation */}
-            <span className='footerContainer'>
-                <h4>Doormat Navigation</h4>
-                <Link to='/' className='footerNavLink'>Home</Link>
-                <Link to='/About' className='footerNavLink'>About</Link>
-                <Link to='/Reservations' className='footerNavLink'>Reservations</Link>
-                <Link to='/OrderOnline' className='footerNavLink'>Order Online</Link>
-                <Link to='/Login' className='footerNavLink'>Login</Link>
-            </span>
+                    {/* Column 3: Contact Information */}
+                    <div className="footer-column">
+                        <h2>Contact</h2>
+                        <ul>
+                            <li>Email: contact@little-lemon.com</li>
+                            <li>Phone: (312) 555-1234</li>
+                            <li>Address: 123 Lemon St, Chicago, IL 60601</li>
+                        </ul>
+                    </div>
 
-            {/* Column 2: Contact */}
-            <span className='footerContainer'>
-                <h4>Contact</h4>
-                <p>Address: City, Street, Building No.</p>
-                <p>Phone: +00 123 4567</p>
-                <p>Email: example@exmp.com</p>
-            </span>
-
-            {/* Column 3: Social Media Links */}
-            <span className='footerContainer'>
-                <h4>Social Media Links</h4>
-                <p>Facebook.</p>
-                <p>Instagram</p>
-                <p>Twitter</p>
-            </span>
+                    {/* Column 4: Social Media */}
+                    <div className="footer-column">
+                        <h2>Social Media</h2>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     );
 }

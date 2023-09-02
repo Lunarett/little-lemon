@@ -1,22 +1,22 @@
-/* Add this to your index.css */
-
-.booking-section {
+.booking-form {
+    position: relative;
     width: 100%;
     height: 50%;
-    background-color: var(--theme-color-1);
+    padding: 20px 10rem;
     background-image: url("../Assets/Restaurant/restaurant.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
     box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
 
-.booking-section::before {
+.booking-form::before {
     content: "";
     position: absolute;
     top: 0;
@@ -25,18 +25,14 @@
     bottom: 0;
     background: var(--tbg-color-1);
     backdrop-filter: blur(15px);
-    z-index: -1;
+    z-index: -2;
 }
 
-.form-container {
-    width: var(--zone);
-}
-
-.booking-form {
-    width: 100%;
+.form-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: var(--zone);
 }
 
 .form-heading {
@@ -61,8 +57,9 @@
     background-color: var(--theme-color-2);
     color: black;
     cursor: pointer;
-    padding: 10px 4rem;
+    padding: 15px 4rem;
     margin-top: 2rem;
+    width: 20%;
 }
 
 .booking-label {
@@ -81,24 +78,36 @@
 
 @media (max-width: 750px) {
     .booking-form {
-        flex-direction: column;
+        padding: 10px;
+        align-items: center;
     }
 
     .form-heading {
-        margin-bottom: 2rem;
+        top: 2rem;
+    }
+
+    .form-content {
+        flex-direction: column;
+    }
+
+    .booking-input {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .booking-label {
+        font-size: 12px;
     }
 
     .form-column {
         width: 100%;
     }
 
-    .booking-input {
-        padding: 15px;
-        font-size: 18px;
-    }
-
     .booking-button {
-        padding: 8px 20px;
-        margin-bottom: 20px;
+        font-size: 16px;
+        margin: 0;
+        width: 60%;
+        padding: 10px;
+        bottom: 2rem;
     }
 }
