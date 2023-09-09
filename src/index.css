@@ -27,7 +27,7 @@
 h1 {
   font-family: 'Markazi Text', serif;
   font-weight: 500;
-  font-size: 80pt;
+  font-size: 70pt;
   text-transform: capitalize;
   line-height: 1;
 }
@@ -36,7 +36,7 @@ h1 {
 h2 {
   font-family: 'Markazi Text', serif;
   font-weight: 400;
-  font-size: 40pt;
+  font-size: 30pt;
   text-transform: capitalize;
   line-height: 1;
 }
@@ -46,7 +46,7 @@ h3 {
   font-family: 'Karla Regular', sans-serif;
   text-transform: sentence-case;
   text-align: left;
-  font-size: clamp(10px, 1vw, 24px);
+  font-size: 18pt;
 }
 
 /* Paragraph */
@@ -55,7 +55,7 @@ p {
   text-transform: sentence-case;
   text-align: justify;
   line-height: 1.5;
-  font-size: clamp(5px, 1.4vw, 18px);
+  font-size: 15pt;
 }
 
 a {

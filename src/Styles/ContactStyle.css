@@ -18,13 +18,23 @@
     padding: 6rem;
 }
 
+.contact-text-box h1 {
+    font-size: 40pt;
+}
+
+.contact-text-box p {
+    font-size: 10pt;
+}
+
 .contact-info h3 {
     margin-top: 1em;
     margin-bottom: 0.5em;
+    font-size: 12pt;
 }
 
 .contact-info p {
     margin-bottom: 1em;
+    font-size: 10pt;
 }
 
 .contact-img {
